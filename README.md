@@ -1,8 +1,6 @@
-
 # kidney-disease-classification
 
 Kidney disease classification with deep learning (MLflow & DVC)
-
 
 ## How to run?
 
