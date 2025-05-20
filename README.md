@@ -2,7 +2,10 @@
 
 Kidney disease classification with deep learning (MLflow & DVC)
 
-## How to run?
+### How to run?
+
+>[!NOTE]
+> Since the model uses VGG16 and Python 3.10.5, `tensorflow==2.12.0` and `mlflow==2.2.2` is required for proper execution.
 
 ### Steps:
 
@@ -12,30 +15,42 @@ Kidney disease classification with deep learning (MLflow & DVC)
 https://github.com/dannngu/kidney-disease-classification.git
 ```
 
-2.Create a venv environment after opening the respository
+2. Create a venv environment after opening the respository
 ```bash
 python -m venv venv
 ```
 
-3.Activate the virtual venv environment
+3. Activate the virtual venv environment
 - osx/linux
 ```bash
 source venv/bin/activate
 ```
 
+
 - windows
+>[!IMPORTANT]
+>On Windows, it is recommended to use `Anaconda3` to create a **virtual environment**, as it better handles dependencies like `pyarrow`.
 ```bash
-.\venv\Scripts\activate
+conda create --name my_env python=3.10
+conda activate my_env
+```
+>[!TIP]
+> Use `Anaconda PowerShell` to execute `pip install -r requirments.txt` to make sure you are installing the dependencies in the desire vitural environment.
+
+
+4. install the required dependencies
+```bash
+pip install -r requirements.txt
 ```
 
 
-## MLflow
+### MLflow
 
 - [🔗MLfllow-Documentation](https://mlflow.org/docs/latest/index.html)
 
 
-### dagshub setup
-[🔗dagshub](https://dagshub.com/)
+### DagsHub setup
+- [🔗dagshub](https://dagshub.com/)
 
 1. Create a `.env` file.
 
@@ -56,8 +71,3 @@ export MLFLOW_TRACKING_PASSWORD=generated_token
 
 
 
-
-4.install the required dependencies
-```bash
-pip install -r requirements.txt
-```
