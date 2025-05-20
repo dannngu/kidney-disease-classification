@@ -69,5 +69,18 @@ export MLFLOW_TRACKING_USERNAME=your_username
 export MLFLOW_TRACKING_PASSWORD=generated_token
 ```
 
-
-
+### DVC commands to run
+- [🔗DVC](https://dvc.org/)
+- 
+1. Initilaize DVC
+```bash
+dvc init
+```
+2. Excecute the DVC pipeline 
+```bash
+dvc repro 
+```
+3. Show the entire graph of your DVC pipeline
+```bash
+dvg dag
+```
